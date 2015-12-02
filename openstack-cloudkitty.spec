@@ -5,7 +5,6 @@ Summary: OpenStack Rating (cloudkitty)
 Version: XXX
 Release: XXX
 License: ASL 2.0
-Group: System Environment/Base
 URL: http://github.com/stackforge/cloudkitty
 Source0: http://tarballs.openstack.org/cloudkitty/cloudkitty-master.tar.gz
 Source1: cloudkitty.logrotate
