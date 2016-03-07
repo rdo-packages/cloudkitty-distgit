@@ -38,6 +38,13 @@ Requires: %{name}-common = %{version}-%{release}
 Requires: %{name}-api = %{version}-%{release}
 Requires: %{name}-processor = %{version}-%{release}
 
+%package -n python-cloudkitty-tests
+Summary:        Glance tests
+Requires:       %{name}-common = %{version}-%{release}
+
+%description -n python-cloudkitty-tests
+This package contains the CloudKitty test files.
+
 %prep
 %setup -q -n cloudkitty-%{upstream_version}
 
@@ -106,6 +113,7 @@ Components common to all CloudKitty services.
 %{_bindir}/cloudkitty-storage-init
 %{_bindir}/cloudkitty-writer
 %{python_sitelib}/cloudkitty*
+%exclude %{python2_sitelib}/cloudkitty/tests
 %dir %attr(0755,cloudkitty,root) %{_localstatedir}/log/cloudkitty
 %dir %attr(0755,cloudkitty,root) %{_localstatedir}/run/cloudkitty
 %dir %attr(0755,cloudkitty,root) %{_sharedstatedir}/cloudkitty
@@ -176,5 +184,8 @@ CloudKitty component for computing rating data.
 %postun processor
 %systemd_postun_with_restart cloudkitty-processor.service
 
+%files -n python-cloudkitty-tests
+%license LICENSE
+%{python2_sitelib}/cloudkitty/tests
 
 %changelog
