@@ -12,6 +12,8 @@ Source2: cloudkitty-api.service
 Source3: cloudkitty-processor.service
 
 BuildArch: noarch
+BuildRequires: python2-devel
+BuildRequires: python-setuptools
 BuildRequires: git
 BuildRequires: python-ceilometerclient
 BuildRequires: python-keystoneclient
