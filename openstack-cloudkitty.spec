@@ -1,12 +1,15 @@
 %global with_doc %{!?_without_doc:1}%{?_without_doc:0}
 
+
+%{!?upstream_version: %global upstream_version %{version}%{?milestone}}
+
 Name: openstack-cloudkitty
 Summary: OpenStack Rating (cloudkitty)
-Version: XXX
-Release: XXX
+Version: 0.5.0
+Release: 1%{?dist}
 License: ASL 2.0
 URL: http://github.com/openstack/cloudkitty
-Source0: http://tarballs.openstack.org/cloudkitty/cloudkitty-master.tar.gz
+Source0: http://tarballs.openstack.org/cloudkitty/cloudkitty-%{version}%{?milestone}.tar.gz
 Source1: cloudkitty.logrotate
 Source2: cloudkitty-api.service
 Source3: cloudkitty-processor.service
@@ -191,3 +194,5 @@ CloudKitty component for computing rating data.
 %{python2_sitelib}/cloudkitty/tests
 
 %changelog
+* Fri Apr  1 2016 RDO <rdo-list@redhat.com> 0.5.0-1
+- RC1 Rebuild for Mitaka RC1 
