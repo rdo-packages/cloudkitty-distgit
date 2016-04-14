@@ -1,5 +1,5 @@
-# UUID          Group Name
-6ddfecad023c6f4fa3ac8c4d2583c502ea675a73 	Non-Interactive Users
-9694f690e9930fa4ee8ca83419ee438eda30187b       	cloudkitty-distgit-core
-489a58df0caa5dd3c82c7dab2a024bd27c0e8646        	cloudkitty-distgit-ptl
-global:Registered-Users		Registered Users
+# UUID                                  	Group Name
+#
+489a58df0caa5dd3c82c7dab2a024bd27c0e8646	openstack/cloudkitty-distgit-ptl
+9694f690e9930fa4ee8ca83419ee438eda30187b	cloudkitty-distgit-core
+global:Registered-Users                 	Registered Users
