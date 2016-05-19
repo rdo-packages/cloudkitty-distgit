@@ -19,7 +19,9 @@ BuildRequires: python2-devel
 BuildRequires: python-setuptools
 BuildRequires: git
 BuildRequires: python-ceilometerclient
+BuildRequires: python-gnocchiclient
 BuildRequires: python-keystoneclient
+BuildRequires: python-keystonemiddleware
 BuildRequires: python-iso8601
 BuildRequires: python-sphinx
 BuildRequires: python-stevedore
@@ -30,11 +32,13 @@ BuildRequires: python-oslo-sphinx
 BuildRequires: python-oslo-i18n
 BuildRequires: python-oslo-db
 BuildRequires: python-oslo-utils
+BuildRequires: python-oslo-policy
 BuildRequires: python-pbr
 BuildRequires: python-pecan
 BuildRequires: python-paste-deploy
 BuildRequires: python-six
 BuildRequires: python-sqlalchemy
+BuildRequires: python-tooz
 BuildRequires: python-werkzeug
 BuildRequires: python-wsme
 BuildRequires: systemd-units
@@ -92,7 +96,9 @@ Summary: CloudKitty common
 Group: System Environment/Base
 
 Requires: python-ceilometerclient
+Requires: python-gnocchiclient
 Requires: python-keystoneclient
+Requires: python-keystonemiddleware
 Requires: python-iso8601
 Requires: python-stevedore
 Requires: python-oslo-messaging
@@ -101,10 +107,12 @@ Requires: python-oslo-config
 Requires: python-oslo-i18n
 Requires: python-oslo-db
 Requires: python-oslo-utils
+Requires: python-oslo-policy
 Requires: python-pecan
 Requires: python-paste-deploy
 Requires: python-six
 Requires: python-sqlalchemy
+Requires: python-tooz
 Requires: python-werkzeug
 Requires: python-wsme
 
