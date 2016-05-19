@@ -41,7 +41,7 @@ Requires: %{name}-api = %{version}-%{release}
 Requires: %{name}-processor = %{version}-%{release}
 
 %package -n python-cloudkitty-tests
-Summary:        Glance tests
+Summary:        CloudKitty tests
 Requires:       %{name}-common = %{version}-%{release}
 
 %description -n python-cloudkitty-tests
