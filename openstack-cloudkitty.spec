@@ -1,3 +1,4 @@
+%{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 %global with_doc %{!?_without_doc:1}%{?_without_doc:0}
 
 Name: openstack-cloudkitty
@@ -6,7 +7,7 @@ Version: XXX
 Release: XXX
 License: ASL 2.0
 URL: http://github.com/openstack/cloudkitty
-Source0: http://tarballs.openstack.org/cloudkitty/cloudkitty-master.tar.gz
+Source0: http://tarballs.openstack.org/cloudkitty/cloudkitty-%{upstream_version}.tar.gz
 Source1: cloudkitty.logrotate
 Source2: cloudkitty-api.service
 Source3: cloudkitty-processor.service
