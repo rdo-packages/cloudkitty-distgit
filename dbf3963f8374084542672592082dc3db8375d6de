@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "facab960_53823b53",
+        "filename": "openstack-cloudkitty.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2016-09-15T10:04:24Z",
+      "side": 1,
+      "message": "use upstream_version here too",
+      "range": {
+        "startLine": 10,
+        "startChar": 57,
+        "endLine": 10,
+        "endChar": 68
+      },
+      "revId": "dbf3963f8374084542672592082dc3db8375d6de",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
