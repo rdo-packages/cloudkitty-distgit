@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dacfb570_6f3110a2",
+        "filename": "openstack-cloudkitty.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 212,
+      "author": {
+        "id": 87
+      },
+      "writtenOn": "2016-10-07T21:03:28Z",
+      "side": 1,
+      "message": "changelog entries are incorrect.\n* \u003cdate\u003e \u003cpackager name and contact\u003e nvr\n- foo\n- bar\n- something (from John Doe)\n\nIf you want to credit someone, you could just mention original author as shown above.",
+      "revId": "a13324deacfca81d53b50d33d8ac8ad4aa25eeff",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
