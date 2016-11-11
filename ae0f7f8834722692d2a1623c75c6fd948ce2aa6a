@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5adbc538_5f8de630",
+        "filename": "openstack-cloudkitty.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 111
+      },
+      "writtenOn": "2016-11-11T07:51:18Z",
+      "side": 1,
+      "message": "What about PYTHONPATH\u003d. oslo-config-generator --config-file\u003detc/oslo-config-generator/cloudkitty.conf --output-file %{buildroot}/etc/cloudkitty/cloudkitty.conf.sample ?",
+      "revId": "ae0f7f8834722692d2a1623c75c6fd948ce2aa6a",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
