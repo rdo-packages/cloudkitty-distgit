@@ -62,6 +62,9 @@ rm -rf {test-,}requirements.txt
 %build
 %{__python} setup.py build
 
+# Generate config file etc/cloudkitty/cloudkitty.conf.sample
+PYTHONPATH=. oslo-config-generator --config-file=etc/oslo-config-generator/cloudkitty.conf
+
 %install
 %{__python} setup.py install -O1 --skip-build --root=%{buildroot}
 mkdir -p %{buildroot}/var/log/cloudkitty/
