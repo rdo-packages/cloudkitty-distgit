@@ -96,24 +96,32 @@ CloudKitty provides a Rating-as-a-Service component for OpenStack.
 Summary: CloudKitty common
 Group: System Environment/Base
 
-Requires: python-ceilometerclient
-Requires: python-gnocchiclient
-Requires: python-keystoneclient
-Requires: python-keystonemiddleware
+Requires: python-alembic >= 0.8.0
+Requires: python-ceilometerclient >= 2.2.1
+Requires: python-eventlet >= 0.18.2
+Requires: python-gnocchiclient >= 2.5.0
+Requires: python-keystoneauth1 >= 2.1.0
+Requires: python-keystoneclient >= 1.6.0
+Requires: python-keystonemiddleware >= 4.0.0
 Requires: python-iso8601
 Requires: python-stevedore
-Requires: python-oslo-messaging
+Requires: python-oslo-messaging >= 5.2.0
 Requires: python-setuptools
-Requires: python-oslo-config
+Requires: python-oslo-concurrency >= 3.5.0
+Requires: python-oslo-config >= 3.7.0
+Requires: python-oslo-context >= 2.9.0
 Requires: python-oslo-i18n
-Requires: python-oslo-db
-Requires: python-oslo-utils
-Requires: python-oslo-policy
+Requires: python-oslo-db >= 4.1.0
+Requires: python-oslo-log >= 1.14.0
+Requires: python-oslo-middleware >= 3.0.0
+Requires: python-oslo-utils >= 3.5.0
+Requires: python-oslo-policy >= 0.5.0
+Requires: python-pbr >= 1.6
 Requires: python-pecan
 Requires: python-paste-deploy
 Requires: python-six
 Requires: python-sqlalchemy
-Requires: python-tooz
+Requires: python-tooz >= 1.28.0
 Requires: python-werkzeug
 Requires: python-wsme
 
