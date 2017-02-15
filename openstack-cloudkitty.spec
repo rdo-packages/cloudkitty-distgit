@@ -137,7 +137,7 @@ Components common to all CloudKitty services.
 %{_bindir}/cloudkitty-writer
 %{python_sitelib}/cloudkitty*
 %exclude %{python2_sitelib}/cloudkitty/tests
-%dir %attr(0755,cloudkitty,root) %{_localstatedir}/log/cloudkitty
+%dir %attr(0750,cloudkitty,root) %{_localstatedir}/log/cloudkitty
 %dir %attr(0755,cloudkitty,root) %{_localstatedir}/run/cloudkitty
 %dir %attr(0755,cloudkitty,root) %{_sharedstatedir}/cloudkitty
 %dir %attr(0755,cloudkitty,root) %{_sysconfdir}/cloudkitty
