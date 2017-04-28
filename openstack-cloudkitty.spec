@@ -3,7 +3,7 @@
 
 Name: openstack-cloudkitty
 Summary: OpenStack Rating (cloudkitty)
-Version: 5.0.0
+Version: 5.0.1
 Release: 1%{?dist}
 License: ASL 2.0
 URL: http://github.com/openstack/cloudkitty
@@ -213,6 +213,9 @@ CloudKitty component for computing rating data.
 %{python2_sitelib}/cloudkitty/tests
 
 %changelog
+* Fri Apr 28 2017 rdo-trunk <javier.pena@redhat.com> 5.0.1-1
+- Update to 5.0.1
+
 * Fri Feb 10 2017 Alfredo Moralejo <amoralej@redhat.com> 5.0.0-1
 - Update to 5.0.0
 
