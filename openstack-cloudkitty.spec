@@ -63,7 +63,6 @@ rm -rf {test-,}requirements.txt
 %{__python} setup.py build
 
 # Generate config file etc/cloudkitty/cloudkitty.conf.sample
-PYTHONPATH=. oslo-config-generator --config-file=etc/oslo-config-generator/cloudkitty.conf
 
 %install
 %{__python} setup.py install -O1 --skip-build --root=%{buildroot}
@@ -79,7 +78,6 @@ mkdir -p %{buildroot}/var/lib/cloudkitty/
 mkdir -p %{buildroot}/etc/cloudkitty/
 
 # we need to package sphinxcontrib-pecanwsme for this to work
-#export PYTHONPATH="$( pwd ):$PYTHONPATH"
 #pushd doc
 #sphinx-build -b html -d build/doctrees source build/html
 #popd
