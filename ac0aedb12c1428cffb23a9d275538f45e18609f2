@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a8c0949_2e371cb2",
+        "filename": "openstack-cloudkitty.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 127
+      },
+      "writtenOn": "2017-08-03T15:54:45Z",
+      "side": 1,
+      "message": "can we try to not change 2 things at once in a review?",
+      "revId": "ac0aedb12c1428cffb23a9d275538f45e18609f2",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
