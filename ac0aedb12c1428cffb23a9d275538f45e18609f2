@@ -16,6 +16,24 @@
       "revId": "ac0aedb12c1428cffb23a9d275538f45e18609f2",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a890539_b3f540cd",
+        "filename": "openstack-cloudkitty.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2017-08-04T12:41:49Z",
+      "side": 1,
+      "message": "Yes please, use separate reviews for these changes.",
+      "parentUuid": "7a8c0949_2e371cb2",
+      "revId": "ac0aedb12c1428cffb23a9d275538f45e18609f2",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
