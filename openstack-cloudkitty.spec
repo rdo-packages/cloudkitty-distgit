@@ -24,7 +24,6 @@ BuildRequires: python-iso8601
 BuildRequires: python-sphinx
 BuildRequires: python-stevedore
 BuildRequires: python-oslo-messaging
-BuildRequires: python-setuptools
 BuildRequires: python-oslo-config
 BuildRequires: python-oslo-sphinx
 BuildRequires: python-oslo-i18n
@@ -37,7 +36,6 @@ BuildRequires: python-paste-deploy
 BuildRequires: python-six
 BuildRequires: python-sqlalchemy
 BuildRequires: python-tooz
-BuildRequires: python-werkzeug
 BuildRequires: python-wsme
 BuildRequires: systemd-units
 
@@ -103,12 +101,11 @@ Requires: python-keystoneclient >= 1.6.0
 Requires: python-keystonemiddleware >= 4.0.0
 Requires: python-iso8601
 Requires: python-stevedore
-Requires: python-oslo-messaging >= 5.2.0
-Requires: python-setuptools
+Requires: python-oslo-messaging >= 5.11.0
 Requires: python-oslo-concurrency >= 3.5.0
 Requires: python-oslo-config >= 3.7.0
 Requires: python-oslo-context >= 2.9.0
-Requires: python-oslo-i18n
+Requires: python-oslo-i18n >= 2.1.0
 Requires: python-oslo-db >= 4.1.0
 Requires: python-oslo-log >= 1.14.0
 Requires: python-oslo-middleware >= 3.0.0
@@ -120,7 +117,6 @@ Requires: python-paste-deploy
 Requires: python-six
 Requires: python-sqlalchemy
 Requires: python-tooz >= 1.28.0
-Requires: python-werkzeug
 Requires: python-wsme
 
 Requires(pre): shadow-utils
