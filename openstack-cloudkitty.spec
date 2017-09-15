@@ -153,9 +153,7 @@ Group: System Environment/Base
 
 Requires: %{name}-common = %{version}-%{release}
 
-Requires(post): systemd
-Requires(preun): systemd
-Requires(postun): systemd
+%{?systemd_requires}
 
 %description api
 OpenStack API for the Rating-as-a-Service component (CloudKitty).
@@ -181,9 +179,7 @@ Group: System Environment/Base
 
 Requires: %{name}-common = %{version}-%{release}
 
-Requires(post): systemd
-Requires(preun): systemd
-Requires(postun): systemd
+%{?systemd_requires}
 
 %description processor
 CloudKitty component for computing rating data.
