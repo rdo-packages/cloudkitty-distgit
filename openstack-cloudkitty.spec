@@ -38,6 +38,7 @@ BuildRequires: python-sqlalchemy
 BuildRequires: python-tooz
 BuildRequires: python-wsme
 BuildRequires: systemd-units
+BuildRequires: openstack-macros
 
 Requires: %{name}-common = %{version}-%{release}
 Requires: %{name}-api = %{version}-%{release}
@@ -55,7 +56,7 @@ This package contains the CloudKitty test files.
 
 # Remove the requirements file so that pbr hooks don't add it
 # to distutils requires_dist config
-rm -rf {test-,}requirements.txt
+%py_req_cleanup
 
 %build
 %{__python} setup.py build
