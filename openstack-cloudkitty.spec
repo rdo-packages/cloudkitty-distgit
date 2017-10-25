@@ -9,7 +9,7 @@ License: ASL 2.0
 URL: http://github.com/openstack/cloudkitty
 Source0: https://tarballs.openstack.org/cloudkitty/cloudkitty-%{upstream_version}.tar.gz
 Source1: cloudkitty.logrotate
-Source2: cloudkitty-api.service
+Source2: cloudkitty-api-httpd.conf
 Source3: cloudkitty-processor.service
 
 BuildArch: noarch
@@ -69,12 +69,15 @@ mkdir -p %{buildroot}/var/log/cloudkitty/
 mkdir -p %{buildroot}/var/run/cloudkitty/
 install -p -D -m 644 %{SOURCE1} %{buildroot}%{_sysconfdir}/logrotate.d/openstack-cloudkitty
 
+# install httpd config file
+install -m 0644 -D -p %{SOURCE2} %{buildroot}%{_sysconfdir}/httpd/conf.d/cloudkitty-api.conf
+
 # install systemd unit files
-install -p -D -m 644 %{SOURCE2} %{buildroot}%{_unitdir}/cloudkitty-api.service
 install -p -D -m 644 %{SOURCE3} %{buildroot}%{_unitdir}/cloudkitty-processor.service
 
 mkdir -p %{buildroot}/var/lib/cloudkitty/
 mkdir -p %{buildroot}/etc/cloudkitty/
+mkdir -p %{buildroot}/var/www/cloudkitty/
 
 # we need to package sphinxcontrib-pecanwsme for this to work
 #pushd doc
@@ -84,6 +87,7 @@ mkdir -p %{buildroot}/etc/cloudkitty/
 install -p -D -m 640 etc/cloudkitty/cloudkitty.conf.sample %{buildroot}/%{_sysconfdir}/cloudkitty/cloudkitty.conf
 install -p -D -m 640 etc/cloudkitty/policy.json %{buildroot}/%{_sysconfdir}/cloudkitty/policy.json
 install -p -D -m 640 etc/cloudkitty/api_paste.ini %{buildroot}%{_sysconfdir}/cloudkitty/api_paste.ini
+install -p -D -m 640 cloudkitty/cloudkitty/app.wsgi %{buildroot}/var/www/cloudkitty/app.wsgi
 
 %description
 CloudKitty provides a Rating-as-a-Service component for OpenStack.
@@ -140,6 +144,7 @@ Components common to all CloudKitty services.
 %config(noreplace) %attr(-, root, cloudkitty) %{_sysconfdir}/cloudkitty/cloudkitty.conf
 %config(noreplace) %attr(-, root, cloudkitty) %{_sysconfdir}/cloudkitty/policy.json
 %config(noreplace) %attr(-, root, cloudkitty) %{_sysconfdir}/cloudkitty/api_paste.ini
+%config(noreplace) %attr(-, root, cloudkitty) /var/www/cloudkitty/app.wsgi
 
 %pre common
 getent group cloudkitty >/dev/null || groupadd -r cloudkitty
@@ -153,6 +158,8 @@ Summary: The CloudKitty API
 Group: System Environment/Base
 
 Requires: %{name}-common = %{version}-%{release}
+Requires: httpd
+Requires: mod_wsgi
 
 %{?systemd_requires}
 
@@ -161,17 +168,6 @@ OpenStack API for the Rating-as-a-Service component (CloudKitty).
 
 %files api
 %doc README.rst LICENSE
-%{_bindir}/cloudkitty-api
-%{_unitdir}/cloudkitty-api.service
-
-%post api
-%systemd_post cloudkitty-api.service
-
-%preun api
-%systemd_preun cloudkitty-api.service
-
-%postun api
-%systemd_postun_with_restart cloudkitty-api.service
 
 
 %package processor
