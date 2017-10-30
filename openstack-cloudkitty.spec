@@ -21,6 +21,7 @@ BuildRequires: python-gnocchiclient
 BuildRequires: python-keystoneclient
 BuildRequires: python-keystonemiddleware
 BuildRequires: python-iso8601
+BuildRequires: python-monascaclient
 BuildRequires: python-sphinx
 BuildRequires: python-stevedore
 BuildRequires: python-oslo-messaging
@@ -101,6 +102,7 @@ Requires: python-keystoneauth1 >= 2.1.0
 Requires: python-keystoneclient >= 1.6.0
 Requires: python-keystonemiddleware >= 4.0.0
 Requires: python-iso8601
+Requires: python-monascaclient >= 1.7.0
 Requires: python-stevedore
 Requires: python-oslo-messaging >= 5.11.0
 Requires: python-oslo-concurrency >= 3.5.0
