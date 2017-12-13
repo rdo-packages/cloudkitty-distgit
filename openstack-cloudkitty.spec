@@ -83,7 +83,6 @@ mkdir -p %{buildroot}/etc/cloudkitty/
 #popd
 
 install -p -D -m 640 etc/cloudkitty/cloudkitty.conf.sample %{buildroot}/%{_sysconfdir}/cloudkitty/cloudkitty.conf
-install -p -D -m 640 etc/cloudkitty/policy.json %{buildroot}/%{_sysconfdir}/cloudkitty/policy.json
 install -p -D -m 640 etc/cloudkitty/api_paste.ini %{buildroot}%{_sysconfdir}/cloudkitty/api_paste.ini
 
 %description
@@ -140,7 +139,6 @@ Components common to all CloudKitty services.
 %dir %attr(0755,cloudkitty,root) %{_sysconfdir}/cloudkitty
 %config(noreplace) %{_sysconfdir}/logrotate.d/openstack-cloudkitty
 %config(noreplace) %attr(-, root, cloudkitty) %{_sysconfdir}/cloudkitty/cloudkitty.conf
-%config(noreplace) %attr(-, root, cloudkitty) %{_sysconfdir}/cloudkitty/policy.json
 %config(noreplace) %attr(-, root, cloudkitty) %{_sysconfdir}/cloudkitty/api_paste.ini
 
 %pre common
