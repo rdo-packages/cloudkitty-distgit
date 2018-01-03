@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a6ced46_3d875f63",
+        "filename": "openstack-cloudkitty.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 85
+      },
+      "writtenOn": "2018-01-03T16:12:09Z",
+      "side": 1,
+      "message": "This is code[1], not an editable config file and should not be under /var.\n\n[1] https://github.com/openstack/cloudkitty/blob/master/cloudkitty/api/app.wsgi",
+      "revId": "7aa61a24eaf9a5cb7d816db950c55c2e72ee1aaa",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
