@@ -38,7 +38,7 @@ BuildRequires: python-six
 BuildRequires: python-sqlalchemy
 BuildRequires: python-tooz
 BuildRequires: python-wsme
-BuildRequires: systemd-units
+BuildRequires: systemd
 BuildRequires: openstack-macros
 
 Requires: %{name}-common = %{version}-%{release}
