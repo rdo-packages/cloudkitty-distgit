@@ -14,30 +14,29 @@ Source3: cloudkitty-processor.service
 
 BuildArch: noarch
 BuildRequires: python2-devel
-BuildRequires: python-setuptools
+BuildRequires: python2-setuptools
 BuildRequires: git
-BuildRequires: python-ceilometerclient
-BuildRequires: python-gnocchiclient
-BuildRequires: python-keystoneclient
-BuildRequires: python-keystonemiddleware
-BuildRequires: python-iso8601
-BuildRequires: python-monascaclient
-BuildRequires: python-sphinx
-BuildRequires: python-stevedore
-BuildRequires: python-oslo-messaging
-BuildRequires: python-oslo-config
-BuildRequires: python-oslo-sphinx
-BuildRequires: python-oslo-i18n
-BuildRequires: python-oslo-db
-BuildRequires: python-oslo-utils
-BuildRequires: python-oslo-policy
-BuildRequires: python-pbr
-BuildRequires: python-pecan
+BuildRequires: python2-ceilometerclient
+BuildRequires: python2-gnocchiclient
+BuildRequires: python2-keystoneclient
+BuildRequires: python2-keystonemiddleware
+BuildRequires: python2-monascaclient
+BuildRequires: python2-sphinx
+BuildRequires: python2-stevedore
+BuildRequires: python2-oslo-messaging
+BuildRequires: python2-oslo-config
+BuildRequires: python2-oslo-sphinx
+BuildRequires: python2-oslo-i18n
+BuildRequires: python2-oslo-db
+BuildRequires: python2-oslo-utils
+BuildRequires: python2-oslo-policy
+BuildRequires: python2-pbr
+BuildRequires: python2-pecan
 BuildRequires: python-paste-deploy
-BuildRequires: python-six
-BuildRequires: python-sqlalchemy
-BuildRequires: python-tooz
-BuildRequires: python-wsme
+BuildRequires: python2-six
+BuildRequires: python2-sqlalchemy
+BuildRequires: python2-tooz
+BuildRequires: python2-wsme
 BuildRequires: systemd
 BuildRequires: openstack-macros
 
@@ -93,33 +92,32 @@ CloudKitty provides a Rating-as-a-Service component for OpenStack.
 Summary: CloudKitty common
 Group: System Environment/Base
 
-Requires: python-alembic >= 0.8.0
-Requires: python-ceilometerclient >= 2.2.1
-Requires: python-eventlet >= 0.18.2
-Requires: python-gnocchiclient >= 2.5.0
-Requires: python-keystoneauth1 >= 2.1.0
-Requires: python-keystoneclient >= 1.6.0
-Requires: python-keystonemiddleware >= 4.0.0
-Requires: python-iso8601
-Requires: python-monascaclient >= 1.7.0
-Requires: python-stevedore
-Requires: python-oslo-messaging >= 5.11.0
-Requires: python-oslo-concurrency >= 3.5.0
-Requires: python-oslo-config >= 3.7.0
-Requires: python-oslo-context >= 2.9.0
-Requires: python-oslo-i18n >= 2.1.0
-Requires: python-oslo-db >= 4.1.0
-Requires: python-oslo-log >= 1.14.0
-Requires: python-oslo-middleware >= 3.0.0
-Requires: python-oslo-utils >= 3.5.0
-Requires: python-oslo-policy >= 0.5.0
-Requires: python-pbr >= 1.6
-Requires: python-pecan
+Requires: python2-alembic >= 0.8.0
+Requires: python2-ceilometerclient >= 2.2.1
+Requires: python2-eventlet >= 0.18.2
+Requires: python2-gnocchiclient >= 2.5.0
+Requires: python2-keystoneauth1 >= 2.1.0
+Requires: python2-keystoneclient >= 1.6.0
+Requires: python2-keystonemiddleware >= 4.0.0
+Requires: python2-monascaclient >= 1.7.0
+Requires: python2-stevedore
+Requires: python2-oslo-messaging >= 5.24.2
+Requires: python2-oslo-concurrency >= 3.5.0
+Requires: python2-oslo-config >= 3.7.0
+Requires: python2-oslo-context >= 2.9.0
+Requires: python2-oslo-i18n >= 2.1.0
+Requires: python2-oslo-db >= 4.1.0
+Requires: python2-oslo-log >= 1.14.0
+Requires: python2-oslo-middleware >= 3.27.0
+Requires: python2-oslo-utils >= 3.5.0
+Requires: python2-oslo-policy >= 0.5.0
+Requires: python2-pbr >= 1.6
+Requires: python2-pecan
 Requires: python-paste-deploy
-Requires: python-six
-Requires: python-sqlalchemy
-Requires: python-tooz >= 1.28.0
-Requires: python-wsme
+Requires: python2-six
+Requires: python2-sqlalchemy
+Requires: python2-tooz >= 1.28.0
+Requires: python2-wsme
 
 Requires(pre): shadow-utils
 
