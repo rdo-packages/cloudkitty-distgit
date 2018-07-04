@@ -83,6 +83,7 @@ mkdir -p %{buildroot}/etc/cloudkitty/
 
 install -p -D -m 640 etc/cloudkitty/cloudkitty.conf.sample %{buildroot}/%{_sysconfdir}/cloudkitty/cloudkitty.conf
 install -p -D -m 640 etc/cloudkitty/api_paste.ini %{buildroot}%{_sysconfdir}/cloudkitty/api_paste.ini
+install -p -D -m 640 etc/cloudkitty/metrics.yml %{buildroot}%{_sysconfdir}/cloudkitty/metrics.yml
 
 %description
 CloudKitty provides a Rating-as-a-Service component for OpenStack.
