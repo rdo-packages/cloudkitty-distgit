@@ -119,6 +119,8 @@ Requires: python2-six
 Requires: python2-sqlalchemy
 Requires: python2-tooz >= 1.28.0
 Requires: python2-wsme
+Requires: python2-iso8601 >= 0.1.9
+Requires: python2-voluptuous >= 0.11.1
 
 Requires(pre): shadow-utils
 
