@@ -1,3 +1,14 @@
+# Macros for py2/py3 compatibility
+%if 0%{?fedora} || 0%{?rhel} > 7
+%global pyver %{python3_pkgversion}
+%else
+%global pyver 2
+%endif
+%global pyver_bin python%{pyver}
+%global pyver_sitelib %python%{pyver}_sitelib
+%global pyver_install %py%{pyver}_install
+%global pyver_build %py%{pyver}_build
+# End of macros for py2/py3 compatibility
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 %global with_doc %{!?_without_doc:1}%{?_without_doc:0}
 
@@ -13,42 +24,49 @@ Source2: cloudkitty-api.service
 Source3: cloudkitty-processor.service
 
 BuildArch: noarch
-BuildRequires: python2-devel
-BuildRequires: python2-setuptools
+BuildRequires: python%{pyver}-devel
+BuildRequires: python%{pyver}-setuptools
 BuildRequires: git
-BuildRequires: python2-ceilometerclient
-BuildRequires: python2-gnocchiclient
-BuildRequires: python2-keystoneclient
-BuildRequires: python2-keystonemiddleware
-BuildRequires: python2-monascaclient
-BuildRequires: python2-sphinx
-BuildRequires: python2-stevedore
-BuildRequires: python2-oslo-messaging
-BuildRequires: python2-oslo-config
-BuildRequires: python2-oslo-sphinx
-BuildRequires: python2-oslo-i18n
-BuildRequires: python2-oslo-db
-BuildRequires: python2-oslo-utils
-BuildRequires: python2-oslo-policy
-BuildRequires: python2-pbr
-BuildRequires: python2-pecan
-BuildRequires: python-paste-deploy
-BuildRequires: python2-six
-BuildRequires: python2-sqlalchemy
-BuildRequires: python2-tooz
-BuildRequires: python2-wsme
+BuildRequires: python%{pyver}-ceilometerclient
+BuildRequires: python%{pyver}-gnocchiclient
+BuildRequires: python%{pyver}-keystoneclient
+BuildRequires: python%{pyver}-keystonemiddleware
+BuildRequires: python%{pyver}-monascaclient
+BuildRequires: python%{pyver}-sphinx
+BuildRequires: python%{pyver}-stevedore
+BuildRequires: python%{pyver}-oslo-messaging
+BuildRequires: python%{pyver}-oslo-config
+BuildRequires: python%{pyver}-oslo-sphinx
+BuildRequires: python%{pyver}-oslo-i18n
+BuildRequires: python%{pyver}-oslo-db
+BuildRequires: python%{pyver}-oslo-utils
+BuildRequires: python%{pyver}-oslo-policy
+BuildRequires: python%{pyver}-pbr
+BuildRequires: python%{pyver}-pecan
+BuildRequires: python%{pyver}-six
+BuildRequires: python%{pyver}-sqlalchemy
+BuildRequires: python%{pyver}-tooz
+BuildRequires: python%{pyver}-wsme
 BuildRequires: systemd
 BuildRequires: openstack-macros
+
+# Handle python2 exception
+%if %{pyver} == 2
+BuildRequires: python-paste-deploy
+%else
+BuildRequires: python%{pyver}-paste-deploy
+%endif
 
 Requires: %{name}-common = %{version}-%{release}
 Requires: %{name}-api = %{version}-%{release}
 Requires: %{name}-processor = %{version}-%{release}
 
-%package -n python-cloudkitty-tests
+%package -n python%{pyver}-cloudkitty-tests
 Summary:        CloudKitty tests
+%{?python_provide:%python_provide python%{pyver}-cloudkitty-tests}
 Requires:       %{name}-common = %{version}-%{release}
 
-%description -n python-cloudkitty-tests
+%description -n python%{pyver}-cloudkitty-tests
 This package contains the CloudKitty test files.
 
 %prep
@@ -59,12 +77,12 @@ This package contains the CloudKitty test files.
 %py_req_cleanup
 
 %build
-%{__python} setup.py build
+%{pyver_build}
 
 # Generate config file etc/cloudkitty/cloudkitty.conf.sample
-PYTHONPATH=. oslo-config-generator --config-file=etc/oslo-config-generator/cloudkitty.conf
+PYTHONPATH=. oslo-config-generator-%{pyver} --config-file=etc/oslo-config-generator/cloudkitty.conf
 %install
-%{__python} setup.py install -O1 --skip-build --root=%{buildroot}
+%{pyver_install}
 mkdir -p %{buildroot}/var/log/cloudkitty/
 mkdir -p %{buildroot}/var/run/cloudkitty/
 install -p -D -m 644 %{SOURCE1} %{buildroot}%{_sysconfdir}/logrotate.d/openstack-cloudkitty
@@ -78,7 +96,7 @@ mkdir -p %{buildroot}/etc/cloudkitty/
 
 # we need to package sphinxcontrib-pecanwsme for this to work
 #pushd doc
-#sphinx-build -b html -d build/doctrees source build/html
+#sphinx-build-%{pyver} -b html -d build/doctrees source build/html
 #popd
 
 install -p -D -m 640 etc/cloudkitty/cloudkitty.conf.sample %{buildroot}/%{_sysconfdir}/cloudkitty/cloudkitty.conf
@@ -93,34 +111,40 @@ CloudKitty provides a Rating-as-a-Service component for OpenStack.
 Summary: CloudKitty common
 Group: System Environment/Base
 
-Requires: python2-alembic >= 0.8.0
-Requires: python2-ceilometerclient >= 2.2.1
-Requires: python2-eventlet >= 0.18.2
-Requires: python2-gnocchiclient >= 2.5.0
-Requires: python2-keystoneauth1 >= 2.1.0
-Requires: python2-keystoneclient >= 1.6.0
-Requires: python2-keystonemiddleware >= 4.0.0
-Requires: python2-monascaclient >= 1.7.0
-Requires: python2-stevedore
-Requires: python2-oslo-messaging >= 5.24.2
-Requires: python2-oslo-concurrency >= 3.5.0
-Requires: python2-oslo-config >= 3.7.0
-Requires: python2-oslo-context >= 2.9.0
-Requires: python2-oslo-i18n >= 2.1.0
-Requires: python2-oslo-db >= 4.1.0
-Requires: python2-oslo-log >= 1.14.0
-Requires: python2-oslo-middleware >= 3.27.0
-Requires: python2-oslo-utils >= 3.5.0
-Requires: python2-oslo-policy >= 0.5.0
-Requires: python2-pbr >= 1.6
-Requires: python2-pecan
+Requires: python%{pyver}-alembic >= 0.8.0
+Requires: python%{pyver}-ceilometerclient >= 2.2.1
+Requires: python%{pyver}-eventlet >= 0.18.2
+Requires: python%{pyver}-gnocchiclient >= 2.5.0
+Requires: python%{pyver}-keystoneauth1 >= 2.1.0
+Requires: python%{pyver}-keystoneclient >= 1.6.0
+Requires: python%{pyver}-keystonemiddleware >= 4.0.0
+Requires: python%{pyver}-monascaclient >= 1.7.0
+Requires: python%{pyver}-stevedore
+Requires: python%{pyver}-oslo-messaging >= 5.24.2
+Requires: python%{pyver}-oslo-concurrency >= 3.5.0
+Requires: python%{pyver}-oslo-config >= 3.7.0
+Requires: python%{pyver}-oslo-context >= 2.9.0
+Requires: python%{pyver}-oslo-i18n >= 2.1.0
+Requires: python%{pyver}-oslo-db >= 4.1.0
+Requires: python%{pyver}-oslo-log >= 1.14.0
+Requires: python%{pyver}-oslo-middleware >= 3.27.0
+Requires: python%{pyver}-oslo-utils >= 3.5.0
+Requires: python%{pyver}-oslo-policy >= 0.5.0
+Requires: python%{pyver}-pbr >= 1.6
+Requires: python%{pyver}-pecan
+Requires: python%{pyver}-six
+Requires: python%{pyver}-sqlalchemy
+Requires: python%{pyver}-tooz >= 1.28.0
+Requires: python%{pyver}-wsme
+Requires: python%{pyver}-iso8601 >= 0.1.9
+Requires: python%{pyver}-voluptuous >= 0.10
+
+# Handle python2 exception
+%if %{pyver} == 2
 Requires: python-paste-deploy
-Requires: python2-six
-Requires: python2-sqlalchemy
-Requires: python2-tooz >= 1.28.0
-Requires: python2-wsme
-Requires: python2-iso8601 >= 0.1.9
-Requires: python2-voluptuous >= 0.10
+%else
+Requires: python%{pyver}-paste-deploy
+%endif
 
 Requires(pre): shadow-utils
 
@@ -132,8 +156,8 @@ Components common to all CloudKitty services.
 %{_bindir}/cloudkitty-dbsync
 %{_bindir}/cloudkitty-storage-init
 %{_bindir}/cloudkitty-writer
-%{python_sitelib}/cloudkitty*
-%exclude %{python2_sitelib}/cloudkitty/tests
+%{pyver_sitelib}/cloudkitty*
+%exclude %{pyver_sitelib}/cloudkitty/tests
 %dir %attr(0750,cloudkitty,root) %{_localstatedir}/log/cloudkitty
 %dir %attr(0755,cloudkitty,root) %{_localstatedir}/run/cloudkitty
 %dir %attr(0755,cloudkitty,root) %{_sharedstatedir}/cloudkitty
@@ -201,8 +225,8 @@ CloudKitty component for computing rating data.
 %postun processor
 %systemd_postun_with_restart cloudkitty-processor.service
 
-%files -n python-cloudkitty-tests
+%files -n python%{pyver}-cloudkitty-tests
 %license LICENSE
-%{python2_sitelib}/cloudkitty/tests
+%{pyver_sitelib}/cloudkitty/tests
 
 %changelog
