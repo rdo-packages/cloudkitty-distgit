@@ -47,6 +47,7 @@ BuildRequires: python%{pyver}-six
 BuildRequires: python%{pyver}-sqlalchemy
 BuildRequires: python%{pyver}-tooz
 BuildRequires: python%{pyver}-wsme
+BuildRequires: python%{pyver}-influxdb
 BuildRequires: systemd
 BuildRequires: openstack-macros
 
@@ -136,6 +137,7 @@ Requires: python%{pyver}-six
 Requires: python%{pyver}-sqlalchemy
 Requires: python%{pyver}-tooz >= 1.28.0
 Requires: python%{pyver}-wsme
+Requires: python%{pyver}-influxdb
 Requires: python%{pyver}-iso8601 >= 0.1.9
 Requires: python%{pyver}-voluptuous >= 0.10
 
