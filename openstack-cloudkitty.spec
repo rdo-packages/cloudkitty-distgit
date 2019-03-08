@@ -40,6 +40,7 @@ BuildRequires: python%{pyver}-oslo-sphinx
 BuildRequires: python%{pyver}-oslo-i18n
 BuildRequires: python%{pyver}-oslo-db
 BuildRequires: python%{pyver}-oslo-utils
+BuildRequires: python%{pyver}-oslo-upgradecheck
 BuildRequires: python%{pyver}-oslo-policy
 BuildRequires: python%{pyver}-pbr
 BuildRequires: python%{pyver}-pecan
@@ -130,6 +131,7 @@ Requires: python%{pyver}-oslo-db >= 4.1.0
 Requires: python%{pyver}-oslo-log >= 1.14.0
 Requires: python%{pyver}-oslo-middleware >= 3.27.0
 Requires: python%{pyver}-oslo-utils >= 3.5.0
+Requires: python%{pyver}-oslo-upgradecheck >= 0.1.1
 Requires: python%{pyver}-oslo-policy >= 0.5.0
 Requires: python%{pyver}-pbr >= 1.6
 Requires: python%{pyver}-pecan
@@ -158,6 +160,7 @@ Components common to all CloudKitty services.
 %{_bindir}/cloudkitty-dbsync
 %{_bindir}/cloudkitty-storage-init
 %{_bindir}/cloudkitty-writer
+%{_bindir}/cloudkitty-status
 %{pyver_sitelib}/cloudkitty*
 %exclude %{pyver_sitelib}/cloudkitty/tests
 %dir %attr(0750,cloudkitty,root) %{_localstatedir}/log/cloudkitty
