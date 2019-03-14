@@ -118,9 +118,9 @@ Requires: python%{pyver}-ceilometerclient >= 2.2.1
 Requires: python%{pyver}-eventlet >= 0.18.2
 Requires: python%{pyver}-gnocchiclient >= 2.5.0
 Requires: python%{pyver}-keystoneauth1 >= 2.1.0
-Requires: python%{pyver}-keystoneclient >= 1.6.0
+Requires: python%{pyver}-keystoneclient >= 1.9.0
 Requires: python%{pyver}-keystonemiddleware >= 4.0.0
-Requires: python%{pyver}-monascaclient >= 1.7.0
+Requires: python%{pyver}-monascaclient >= 1.9.0
 Requires: python%{pyver}-stevedore
 Requires: python%{pyver}-oslo-messaging >= 5.24.2
 Requires: python%{pyver}-oslo-concurrency >= 3.5.0
@@ -133,7 +133,7 @@ Requires: python%{pyver}-oslo-middleware >= 3.27.0
 Requires: python%{pyver}-oslo-utils >= 3.5.0
 Requires: python%{pyver}-oslo-upgradecheck >= 0.1.1
 Requires: python%{pyver}-oslo-policy >= 0.5.0
-Requires: python%{pyver}-pbr >= 1.6
+Requires: python%{pyver}-pbr >= 2.0.0
 Requires: python%{pyver}-pecan
 Requires: python%{pyver}-six
 Requires: python%{pyver}-sqlalchemy
