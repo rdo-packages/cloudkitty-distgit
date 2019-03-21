@@ -49,6 +49,8 @@ BuildRequires: python%{pyver}-sqlalchemy
 BuildRequires: python%{pyver}-tooz
 BuildRequires: python%{pyver}-wsme
 BuildRequires: python%{pyver}-influxdb
+BuildRequires: python%{pyver}-flask
+BuildRequires: python%{pyver}-flask-restful
 BuildRequires: systemd
 BuildRequires: openstack-macros
 
@@ -142,6 +144,8 @@ Requires: python%{pyver}-wsme
 Requires: python%{pyver}-influxdb
 Requires: python%{pyver}-iso8601 >= 0.1.9
 Requires: python%{pyver}-voluptuous >= 0.10
+Requires: python%{pyver}-flask
+Requires: python%{pyver}-flask-restful
 
 # Handle python2 exception
 %if %{pyver} == 2
