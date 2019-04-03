@@ -243,3 +243,4 @@ CloudKitty component for computing rating data.
 * Fri Mar 22 2019 RDO <dev@lists.rdoproject.org> 9.0.0-0.1.0rc1
 - Update to 9.0.0.0rc1
 
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/cloudkitty/commit/?id=bae398db2fab9feedbf46d68405a1c51114c2377
