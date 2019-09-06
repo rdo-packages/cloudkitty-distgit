@@ -52,6 +52,7 @@ BuildRequires: python%{pyver}-influxdb
 BuildRequires: python%{pyver}-flask
 BuildRequires: python%{pyver}-flask-restful
 BuildRequires: python%{pyver}-cotyledon
+BuildRequires: python%{pyver}-futurist
 BuildRequires: systemd
 BuildRequires: openstack-macros
 
@@ -118,7 +119,6 @@ Group: System Environment/Base
 
 Requires: python%{pyver}-alembic >= 0.8.0
 Requires: python%{pyver}-ceilometerclient >= 2.2.1
-Requires: python%{pyver}-eventlet >= 0.18.2
 Requires: python%{pyver}-gnocchiclient >= 2.5.0
 Requires: python%{pyver}-keystoneauth1 >= 2.1.0
 Requires: python%{pyver}-keystoneclient >= 1.9.0
@@ -148,6 +148,7 @@ Requires: python%{pyver}-voluptuous >= 0.10
 Requires: python%{pyver}-flask
 Requires: python%{pyver}-flask-restful
 Requires: python%{pyver}-cotyledon
+Requires: python%{pyver}-futurist >= 1.6.0
 
 # Handle python2 exception
 %if %{pyver} == 2
