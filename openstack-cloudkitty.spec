@@ -144,7 +144,7 @@ Requires: python%{pyver}-tooz >= 1.28.0
 Requires: python%{pyver}-wsme
 Requires: python%{pyver}-influxdb
 Requires: python%{pyver}-iso8601 >= 0.1.9
-Requires: python%{pyver}-voluptuous >= 0.10
+Requires: python%{pyver}-voluptuous >= 0.11.1
 Requires: python%{pyver}-flask
 Requires: python%{pyver}-flask-restful
 Requires: python%{pyver}-cotyledon
