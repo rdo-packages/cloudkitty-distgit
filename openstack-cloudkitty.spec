@@ -14,8 +14,8 @@
 
 Name: openstack-cloudkitty
 Summary: OpenStack Rating (cloudkitty)
-Version: XXX
-Release: XXX
+Version: 11.0.0
+Release: 1%{?dist}
 License: ASL 2.0
 URL: http://github.com/openstack/cloudkitty
 Source0: https://tarballs.openstack.org/cloudkitty/cloudkitty-%{upstream_version}.tar.gz
@@ -242,3 +242,6 @@ CloudKitty component for computing rating data.
 %{pyver_sitelib}/cloudkitty/tests
 
 %changelog
+* Mon Sep 30 2019 RDO <dev@lists.rdoproject.org> 11.0.0-1
+- Update to 11.0.0
+
