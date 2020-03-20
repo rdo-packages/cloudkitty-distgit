@@ -3,7 +3,7 @@
 
 Name: openstack-cloudkitty
 Summary: OpenStack Rating (cloudkitty)
-Version: 8.0.0
+Version: 8.0.1
 Release: 1%{?dist}
 License: ASL 2.0
 URL: http://github.com/openstack/cloudkitty
@@ -206,6 +206,9 @@ CloudKitty component for computing rating data.
 %{python2_sitelib}/cloudkitty/tests
 
 %changelog
+* Fri Mar 20 2020 RDO <dev@lists.rdoproject.org> 8.0.1-1
+- Update to 8.0.1
+
 * Thu Aug 23 2018 RDO <dev@lists.rdoproject.org> 8.0.0-1
 - Update to 8.0.0
 
