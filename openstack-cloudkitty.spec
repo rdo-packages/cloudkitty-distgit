@@ -134,6 +134,7 @@ Requires: python3-cotyledon
 Requires: python3-futurist >= 1.6.0
 
 Requires: python3-paste-deploy
+Requires: python3-dateutil >= 2.5.3
 
 Requires(pre): shadow-utils
 
