@@ -1,4 +1,6 @@
 %global milestone .0rc2
+%{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
+%global sources_gpg_sign 0x2426b928085a020d8a90d0d879ab7008d0896c8a
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 %global with_doc %{!?_without_doc:1}%{?_without_doc:0}
 
@@ -14,8 +16,18 @@ Source0: https://tarballs.openstack.org/cloudkitty/cloudkitty-%{upstream_version
 Source1: cloudkitty.logrotate
 Source2: cloudkitty-api.service
 Source3: cloudkitty-processor.service
+# Required for tarball sources verification
+%if 0%{?sources_gpg} == 1
+Source101:        https://tarballs.openstack.org/cloudkitty/cloudkitty-%{upstream_version}.tar.gz.asc
+Source102:        https://releases.openstack.org/_static/%{sources_gpg_sign}.txt
+%endif
 
 BuildArch: noarch
+
+# Required for tarball sources verification
+%if 0%{?sources_gpg} == 1
+BuildRequires:  /usr/bin/gpgv2
+%endif
 BuildRequires: python3-devel
 BuildRequires: python3-setuptools
 BuildRequires: git
@@ -63,6 +75,10 @@ Requires:       %{name}-common = %{version}-%{release}
 This package contains the CloudKitty test files.
 
 %prep
+# Required for tarball sources verification
+%if 0%{?sources_gpg} == 1
+%{gpgverify}  --keyring=%{SOURCE102} --signature=%{SOURCE101} --data=%{SOURCE0}
+%endif
 %setup -q -n cloudkitty-%{upstream_version}
 
 # Remove the requirements file so that pbr hooks don't add it
@@ -224,6 +240,9 @@ CloudKitty component for computing rating data.
 %{python3_sitelib}/cloudkitty/tests
 
 %changelog
+* Wed Oct 14 2020 Joel Capitao <jcapitao@redhat.com> 13.0.0-0.2.0rc1
+- Enable sources tarball validation using GPG signature.
+
 * Thu Oct 08 2020 RDO <dev@lists.rdoproject.org> 13.0.0-0.2.0rc1
 - Update to 13.0.0.0rc2
 
