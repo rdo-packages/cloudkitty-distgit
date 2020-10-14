@@ -1,4 +1,3 @@
-%global milestone .0rc2
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
 %global sources_gpg_sign 0x2426b928085a020d8a90d0d879ab7008d0896c8a
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
@@ -7,11 +6,10 @@
 Name: openstack-cloudkitty
 Summary: OpenStack Rating (cloudkitty)
 Version: 13.0.0
-Release: 0.2%{?milestone}%{?dist}
+Release: 1%{?dist}
 License: ASL 2.0
 URL: http://github.com/openstack/cloudkitty
 Source0: https://tarballs.openstack.org/cloudkitty/cloudkitty-%{upstream_version}.tar.gz
-# patches_base=13.0.0.0rc2
 
 Source1: cloudkitty.logrotate
 Source2: cloudkitty-api.service
@@ -240,7 +238,8 @@ CloudKitty component for computing rating data.
 %{python3_sitelib}/cloudkitty/tests
 
 %changelog
-* Wed Oct 14 2020 Joel Capitao <jcapitao@redhat.com> 13.0.0-0.2.0rc1
+* Wed Oct 14 2020 RDO <dev@lists.rdoproject.org> 13.0.0-1
+- Update to 13.0.0
 - Enable sources tarball validation using GPG signature.
 
 * Thu Oct 08 2020 RDO <dev@lists.rdoproject.org> 13.0.0-0.2.0rc1
