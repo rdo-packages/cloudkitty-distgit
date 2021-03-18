@@ -117,40 +117,39 @@ CloudKitty provides a Rating-as-a-Service component for OpenStack.
 Summary: CloudKitty common
 Group: System Environment/Base
 
-Requires: python3-alembic >= 0.8.0
-Requires: python3-gnocchiclient >= 2.5.0
-Requires: python3-keystoneauth1 >= 2.1.0
-Requires: python3-keystoneclient >= 1.9.0
-Requires: python3-keystonemiddleware >= 4.0.0
-Requires: python3-monascaclient >= 1.9.0
-Requires: python3-stevedore
-Requires: python3-oslo-messaging >= 5.24.2
-Requires: python3-oslo-concurrency >= 3.5.0
-Requires: python3-oslo-config >= 3.7.0
-Requires: python3-oslo-context >= 2.9.0
-Requires: python3-oslo-i18n >= 2.1.0
-Requires: python3-oslo-db >= 4.1.0
-Requires: python3-oslo-log >= 1.14.0
-Requires: python3-oslo-middleware >= 3.27.0
-Requires: python3-oslo-utils >= 3.5.0
-Requires: python3-oslo-upgradecheck >= 0.1.1
-Requires: python3-oslo-policy >= 0.5.0
-Requires: python3-pbr >= 2.0.0
-Requires: python3-pecan
-Requires: python3-six
+Requires: python3-alembic >= 1.4.3
+Requires: python3-gnocchiclient >= 7.0.6
+Requires: python3-keystoneauth1 >= 4.2.1
+Requires: python3-keystoneclient >= 4.1.1
+Requires: python3-keystonemiddleware >= 9.1.0
+Requires: python3-monascaclient >= 2.2.1
+Requires: python3-stevedore >= 3.2.2
+Requires: python3-oslo-messaging >= 12.6.0
+Requires: python3-oslo-concurrency >= 4.3.1
+Requires: python3-oslo-config >= 8.3.3
+Requires: python3-oslo-context >= 3.1.1
+Requires: python3-oslo-i18n >= 5.0.1
+Requires: python3-oslo-db >= 8.4.0
+Requires: python3-oslo-log >= 4.4.0
+Requires: python3-oslo-middleware >= 4.1.1
+Requires: python3-oslo-utils >= 4.7.0
+Requires: python3-oslo-upgradecheck >= 1.3.0
+Requires: python3-oslo-policy >= 3.6.0
+Requires: python3-pbr >= 5.5.1
+Requires: python3-pecan >= 1.3.3
 Requires: python3-sqlalchemy
-Requires: python3-tooz >= 1.28.0
+Requires: python3-tooz >= 2.7.1
 Requires: python3-wsme
 Requires: python3-influxdb
-Requires: python3-iso8601 >= 0.1.9
-Requires: python3-voluptuous >= 0.11.1
-Requires: python3-flask
-Requires: python3-flask-restful
-Requires: python3-cotyledon
-Requires: python3-futurist >= 1.6.0
+Requires: python3-iso8601 >= 0.1.13
+Requires: python3-voluptuous >= 0.12.0
+Requires: python3-flask >= 1.1.2
+Requires: python3-flask-restful >= 0.3.8
+Requires: python3-cotyledon >= 1.7.3
+Requires: python3-futurist >= 2.3.0
 
-Requires: python3-paste-deploy
-Requires: python3-dateutil >= 2.5.3
+Requires: python3-paste-deploy >= 2.1.1
+Requires: python3-dateutil >= 2.7.0
 
 Requires(pre): shadow-utils
 
