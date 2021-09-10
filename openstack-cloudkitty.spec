@@ -118,7 +118,7 @@ Summary: CloudKitty common
 Group: System Environment/Base
 
 Requires: python3-alembic >= 1.4.3
-Requires: python3-gnocchiclient >= 2.5.0
+Requires: python3-gnocchiclient >= 7.0.4
 Requires: python3-keystoneauth1 >= 4.2.1
 Requires: python3-keystoneclient >= 4.1.1
 Requires: python3-keystonemiddleware >= 9.1.0
@@ -141,7 +141,7 @@ Requires: python3-sqlalchemy
 Requires: python3-tooz >= 2.7.1
 Requires: python3-wsme
 Requires: python3-influxdb
-Requires: python3-iso8601 >= 0.1.9
+Requires: python3-iso8601 >= 0.1.12
 Requires: python3-voluptuous >= 0.12.0
 Requires: python3-flask >= 1.1.2
 Requires: python3-flask-restful >= 0.3.8
