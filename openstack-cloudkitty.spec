@@ -143,13 +143,13 @@ Requires: python3-wsme
 Requires: python3-influxdb
 Requires: python3-iso8601 >= 0.1.12
 Requires: python3-voluptuous >= 0.12.0
-Requires: python3-flask >= 1:1.1.2
-Requires: python3-flask-restful >= 0.3.8
+Requires: python3-flask >= 2.0.0
+Requires: python3-flask-restful >= 0.3.9
 Requires: python3-cotyledon >= 1.7.3
 Requires: python3-futurist >= 2.3.0
 
 Requires: python3-paste-deploy >= 2.1.1
-Requires: python3-dateutil >= 2.7.0
+Requires: python3-dateutil >= 2.8.0
 
 Requires(pre): shadow-utils
 
