@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dac9cc1c_8afc0cd8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2022-03-07T08:17:23Z",
+      "side": 1,
+      "message": "Flask update is introduced by https://review.opendev.org/c/openstack/cloudkitty/+/793973",
+      "revId": "8d6d49dbeeabbd730a42ddd6c45c8063a4a66d24",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
