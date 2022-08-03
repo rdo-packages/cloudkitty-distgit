@@ -28,7 +28,6 @@ BuildRequires:  /usr/bin/gpgv2
 BuildRequires: python3-devel
 BuildRequires: python3-setuptools
 BuildRequires: git-core
-BuildRequires: python3-ceilometerclient
 BuildRequires: python3-gnocchiclient
 BuildRequires: python3-keystoneclient
 BuildRequires: python3-keystonemiddleware
