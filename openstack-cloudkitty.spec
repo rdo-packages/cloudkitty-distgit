@@ -1,15 +1,20 @@
+%global milestone .0rc1
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0x2426b928085a020d8a90d0d879ab7008d0896c8a
+%global sources_gpg_sign 0xa63ea142678138d1bb15f2e303bdfd64dd164087
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 %global with_doc %{!?_without_doc:1}%{?_without_doc:0}
 
 Name: openstack-cloudkitty
 Summary: OpenStack Rating (cloudkitty)
-Version: XXX
-Release: XXX
+Version: 17.0.0
+Release: 0.1%{?milestone}%{?dist}
 License: ASL 2.0
 URL: http://github.com/openstack/cloudkitty
 Source0: https://tarballs.openstack.org/cloudkitty/cloudkitty-%{upstream_version}.tar.gz
+#
+# patches_base=17.0.0.0rc1
+#
+
 Source1: cloudkitty.logrotate
 Source2: cloudkitty-api.service
 Source3: cloudkitty-processor.service
@@ -235,3 +240,6 @@ CloudKitty component for computing rating data.
 %{python3_sitelib}/cloudkitty/tests
 
 %changelog
+* Fri Sep 16 2022 RDO <dev@lists.rdoproject.org> 17.0.0-0.1.0rc1
+- Update to 17.0.0.0rc1
+
