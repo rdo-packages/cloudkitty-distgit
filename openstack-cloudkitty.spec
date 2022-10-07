@@ -48,7 +48,7 @@ BuildRequires: python3-oslo-policy
 BuildRequires: python3-pbr
 BuildRequires: python3-pecan
 BuildRequires: python3-six
-BuildRequires: python3-sqlalchemy
+BuildRequires: python3-sqlalchemy < 1.4.0
 BuildRequires: python3-tooz
 BuildRequires: python3-wsme
 BuildRequires: python3-influxdb
@@ -139,7 +139,7 @@ Requires: python3-oslo-upgradecheck >= 1.3.0
 Requires: python3-oslo-policy >= 3.6.0
 Requires: python3-pbr >= 5.5.1
 Requires: python3-pecan >= 1.3.3
-Requires: python3-sqlalchemy
+Requires: python3-sqlalchemy < 1.4.0
 Requires: python3-tooz >= 2.7.1
 Requires: python3-wsme
 Requires: python3-influxdb
