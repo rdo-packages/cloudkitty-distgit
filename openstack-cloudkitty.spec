@@ -117,13 +117,13 @@ Summary: CloudKitty common
 Group: System Environment/Base
 
 Requires: python3-alembic >= 1.4.3
-Requires: python3-gnocchiclient >= 7.0.4
+Requires: python3-gnocchiclient >= 7.0.6
 Requires: python3-keystoneauth1 >= 4.2.1
 Requires: python3-keystoneclient >= 4.1.1
 Requires: python3-keystonemiddleware >= 9.1.0
 Requires: python3-monascaclient >= 2.2.1
 Requires: python3-stevedore >= 3.2.2
-Requires: python3-oslo-messaging >= 12.6.0
+Requires: python3-oslo-messaging >= 14.1.0
 Requires: python3-oslo-concurrency >= 4.3.1
 Requires: python3-oslo-config >= 8.3.3
 Requires: python3-oslo-context >= 3.1.1
@@ -136,11 +136,11 @@ Requires: python3-oslo-upgradecheck >= 1.3.0
 Requires: python3-oslo-policy >= 3.6.0
 Requires: python3-pbr >= 5.5.1
 Requires: python3-pecan >= 1.3.3
-Requires: python3-sqlalchemy
+Requires: python3-sqlalchemy >= 1.3.20
 Requires: python3-tooz >= 2.7.1
-Requires: python3-wsme
-Requires: python3-influxdb
-Requires: python3-iso8601 >= 0.1.12
+Requires: python3-wsme >= 0.10.0
+Requires: python3-influxdb >= 5.3.1
+Requires: python3-iso8601 >= 0.1.13
 Requires: python3-voluptuous >= 0.12.0
 Requires: python3-flask >= 2.0.0
 Requires: python3-flask-restful >= 0.3.9
