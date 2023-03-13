@@ -139,7 +139,7 @@ Requires: python3-pecan >= 1.3.3
 Requires: python3-sqlalchemy >= 1.3.20
 Requires: python3-tooz >= 2.7.1
 Requires: python3-wsme >= 0.10.0
-Requires: python3-influxdb >= 5.2.0
+Requires: python3-influxdb >= 5.3.1
 Requires: python3-iso8601 >= 0.1.13
 Requires: python3-voluptuous >= 0.12.0
 Requires: python3-flask >= 2.0.0
@@ -149,6 +149,7 @@ Requires: python3-futurist >= 2.3.0
 
 Requires: python3-paste-deploy >= 2.1.1
 Requires: python3-dateutil >= 2.8.0
+Requires: python3-datetimerange >= 0.6.1
 
 Requires(pre): shadow-utils
 
