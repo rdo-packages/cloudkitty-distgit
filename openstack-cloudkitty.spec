@@ -60,6 +60,7 @@ sed -i /^[[:space:]]*-c{env:.*_CONSTRAINTS_FILE.*/d tox.ini
 sed -i "s/^deps = -c{env:.*_CONSTRAINTS_FILE.*/deps =/" tox.ini
 sed -i /^minversion.*/d tox.ini
 sed -i /^requires.*virtualenv.*/d tox.ini
+sed -i '/.*pip install.*/d' tox.ini
 
 # Remove syntax check tests
 rm -f cloudkitty/tests/test_hacking.py
