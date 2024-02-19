@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "740034fd_c4cfc3c9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2024-02-19T16:55:07Z",
+      "side": 1,
+      "message": "adding the new runtime dep with https://review.rdoproject.org/r/c/rdoinfo/+/51723",
+      "revId": "6e4fd0871110281249e99372122a77c3c0712532",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
