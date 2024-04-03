@@ -1,0 +1,10 @@
+Workflow+1: Joel Capitao <jcapitao@redhat.com>
+Code-Review+2: Alfredo Moralejo <amoralej@redhat.com>
+Code-Review+2: Joel Capitao <jcapitao@redhat.com>
+Workflow+1: Alfredo Moralejo <amoralej@redhat.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Wed, 03 Apr 2024 16:29:19 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/openstack/cloudkitty-distgit/+/52649
+Project: openstack/cloudkitty-distgit
+Branch: refs/heads/caracal-rdo
