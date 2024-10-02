@@ -1,0 +1,8 @@
+Code-Review+2: Joel Capitao <jcapitao@redhat.com>
+Workflow+1: Joel Capitao <jcapitao@redhat.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Wed, 02 Oct 2024 12:37:57 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/openstack/cloudkitty-distgit/+/54870
+Project: openstack/cloudkitty-distgit
+Branch: refs/heads/dalmatian-rdo
