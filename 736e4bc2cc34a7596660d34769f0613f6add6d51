@@ -1,0 +1,8 @@
+Workflow+1: Karolina Kula <kkula@redhat.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Code-Review+2: Karolina Kula <kkula@redhat.com>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Thu, 24 Oct 2024 12:01:20 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/openstack/cloudkitty-distgit/+/55185
+Project: openstack/cloudkitty-distgit
+Branch: refs/heads/antelope-rdo
