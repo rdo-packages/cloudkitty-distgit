@@ -207,3 +207,4 @@ CloudKitty component for computing rating data.
 %{python3_sitelib}/cloudkitty/tests
 
 %changelog
+# REMOVEME: error caused by commit https://opendev.org/openstack/cloudkitty/commit/9313b93b13798adb764a8bb61cb0da669ee62c44
