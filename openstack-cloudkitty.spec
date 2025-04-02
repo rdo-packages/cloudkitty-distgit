@@ -1,4 +1,3 @@
-%global milestone .0rc1
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
 %global sources_gpg_sign 0x22284f69d9eccdf3df7819791c711af193ff8e54
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
@@ -13,12 +12,10 @@
 Name: openstack-cloudkitty
 Summary: OpenStack Rating (cloudkitty)
 Version: 22.0.0
-Release: 0.1%{?milestone}%{?dist}
+Release: 1%{?dist}
 License: Apache-2.0
 URL: http://github.com/openstack/cloudkitty
 Source0: https://tarballs.openstack.org/cloudkitty/cloudkitty-%{upstream_version}.tar.gz
-#
-# patches_base=22.0.0.0rc1
 #
 
 Source1: cloudkitty.logrotate
@@ -212,6 +209,9 @@ CloudKitty component for computing rating data.
 %{python3_sitelib}/cloudkitty/tests
 
 %changelog
+* Wed Apr 02 2025 RDO <dev@lists.rdoproject.org> 22.0.0-1
+- Update to 22.0.0
+
 * Tue Mar 18 2025 RDO <dev@lists.rdoproject.org> 22.0.0-0.1.0rc1
 - Update to 22.0.0.0rc1
 
