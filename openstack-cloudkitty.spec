@@ -91,16 +91,16 @@ done
 # Generate config file etc/cloudkitty/cloudkitty.conf.sample
 PYTHONPATH="%{buildroot}/%{python3_sitelib}" oslo-config-generator --config-file=etc/oslo-config-generator/cloudkitty.conf
 
-mkdir -p %{buildroot}/var/log/cloudkitty/
-mkdir -p %{buildroot}/var/run/cloudkitty/
+mkdir -p %{buildroot}/%{_localstatedir}/log/cloudkitty/
+mkdir -p %{buildroot}/%{_localstatedir}/run/cloudkitty/
 install -p -D -m 644 %{SOURCE1} %{buildroot}%{_sysconfdir}/logrotate.d/openstack-cloudkitty
 
 # install systemd unit files
 install -p -D -m 644 %{SOURCE2} %{buildroot}%{_unitdir}/cloudkitty-api.service
 install -p -D -m 644 %{SOURCE3} %{buildroot}%{_unitdir}/cloudkitty-processor.service
 
-mkdir -p %{buildroot}/var/lib/cloudkitty/
-mkdir -p %{buildroot}/etc/cloudkitty/
+mkdir -p %{buildroot}/%{_localstatedir}/lib/cloudkitty/
+mkdir -p %{buildroot}/%{_sysconfdir}/cloudkitty/
 
 # we need to package sphinxcontrib-pecanwsme for this to work
 #pushd doc
