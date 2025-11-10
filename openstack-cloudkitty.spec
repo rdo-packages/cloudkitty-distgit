@@ -1,13 +1,20 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
 %global sources_gpg_sign 0x22284f69d9eccdf3df7819791c711af193ff8e54
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
+%global rhosp 0
+%if 0%{?rhosp}
+# Always disable docs downstream
+%global with_doc 0
+%else
+# Let user specify in other cases
+%global with_doc %{!?_without_doc:1}%{?_without_doc:0}
+%endif
 # we are excluding some BRs from automatic generator
 %global excluded_brs doc8 bandit pre-commit hacking flake8-import-order os-api-ref
 # Exclude sphinx from BRs if docs are disabled
 %if ! 0%{?with_doc}
-%global excluded_brs %{excluded_brs} sphinx openstackdocstheme
+%global excluded_brs %{excluded_brs} sphinx openstackdocstheme sphinxcontrib-pecanwsme
 %endif
-%global with_doc %{!?_without_doc:1}%{?_without_doc:0}
 
 Name: openstack-cloudkitty
 Summary: OpenStack Rating (cloudkitty)
