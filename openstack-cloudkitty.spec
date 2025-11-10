@@ -1,11 +1,15 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
 %global sources_gpg_sign 0x2426b928085a020d8a90d0d879ab7008d0896c8a
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
+%global rhosp 0
+%if 0%{?rhosp}
+%global with_doc 0
+%endif
 # we are excluding some BRs from automatic generator
 %global excluded_brs doc8 bandit pre-commit hacking flake8-import-order os-api-ref
 # Exclude sphinx from BRs if docs are disabled
 %if ! 0%{?with_doc}
-%global excluded_brs %{excluded_brs} sphinx openstackdocstheme
+%global excluded_brs %{excluded_brs} sphinx openstackdocstheme sphinxcontrib-pecanwsme
 %endif
 %global with_doc %{!?_without_doc:1}%{?_without_doc:0}
 
@@ -53,7 +57,7 @@ This package contains the CloudKitty test files.
 %if 0%{?sources_gpg} == 1
 %{gpgverify}  --keyring=%{SOURCE102} --signature=%{SOURCE101} --data=%{SOURCE0}
 %endif
-%autosetup -n cloudkitty-%{upstream_version} -S git
+%autosetup -n cloudkitty-%{upstream_version} -S git -p1
 
 
 sed -i /^[[:space:]]*-c{env:.*_CONSTRAINTS_FILE.*/d tox.ini
