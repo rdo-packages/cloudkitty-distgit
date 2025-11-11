@@ -127,7 +127,8 @@ Requires(pre): shadow-utils
 Components common to all CloudKitty services.
 
 %check
-%tox -e %{default_toxenv}
+# first -- ends the macro, second ends the cli options for tox
+%tox -e %{default_toxenv} -- -- --concurrency=4
 
 %files common
 %doc LICENSE
