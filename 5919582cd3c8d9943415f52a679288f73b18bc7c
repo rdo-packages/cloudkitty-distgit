@@ -16,6 +16,41 @@
       "message": "The failure here is the concurrency issue I also hit downstream.\n\nSetting stestr to do max-concurrency \u003d 4 or 8 works.\n\nI\u0027m not sure how to resolve this as it\u0027s a different scope.",
       "revId": "5919582cd3c8d9943415f52a679288f73b18bc7c",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "aec107e8_8aa688aa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 363
+      },
+      "writtenOn": "2025-11-11T17:35:05Z",
+      "side": 1,
+      "message": "https://cbs.centos.org/kojifiles/work/tasks/9613/5299613/build.log",
+      "parentUuid": "ef38d656_17760f80",
+      "revId": "5919582cd3c8d9943415f52a679288f73b18bc7c",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fa620b61_9912bb59",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 363
+      },
+      "writtenOn": "2025-11-11T17:35:05Z",
+      "side": 1,
+      "message": "recheck",
+      "revId": "5919582cd3c8d9943415f52a679288f73b18bc7c",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
