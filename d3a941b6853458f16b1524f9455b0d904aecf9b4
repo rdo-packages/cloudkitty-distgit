@@ -18,6 +18,24 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a25d7f0c_821ec366",
+        "filename": "openstack-cloudkitty.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 657
+      },
+      "writtenOn": "2025-11-13T15:20:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "417d761d_ed5c1f0e",
+      "revId": "d3a941b6853458f16b1524f9455b0d904aecf9b4",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6a7408c2_59ff703e",
@@ -31,6 +49,30 @@
       "writtenOn": "2025-11-13T10:24:01Z",
       "side": 1,
       "message": "nit: not needed because -p1 is already the default behavior for the underlying git apply call https://git-scm.com/docs/git-apply#Documentation/git-apply.txt--pn\n\nLooks like the general pattern in RDO distgits is to leave it out, only 6 repos out of 226 instances have it:\nhttps://github.com/search?q\u003dorg%3Ardo-packages+autosetup+%22-p1%22\u0026type\u003dcode\nhttps://github.com/search?q\u003dorg%3Ardo-packages+autosetup\u0026type\u003dcode\n\nSo we can drop it for consistency.",
+      "range": {
+        "startLine": 60,
+        "startChar": 51,
+        "endLine": 60,
+        "endChar": 55
+      },
+      "revId": "d3a941b6853458f16b1524f9455b0d904aecf9b4",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2eafde8d_9369b804",
+        "filename": "openstack-cloudkitty.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 657
+      },
+      "writtenOn": "2025-11-13T15:20:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6a7408c2_59ff703e",
       "range": {
         "startLine": 60,
         "startChar": 51,
