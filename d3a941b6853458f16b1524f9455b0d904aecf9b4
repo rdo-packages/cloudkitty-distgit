@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "417d761d_ed5c1f0e",
+        "filename": "openstack-cloudkitty.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 657
+      },
+      "writtenOn": "2025-11-13T10:24:01Z",
+      "side": 1,
+      "message": "It seems this line can set with_doc to 1 even when it was previously set to 0 in line 6.\n\nIt doesn\u0027t impact the excluded_brs because they\u0027re defined before this, but it does impact the later %generate_buildrequires section: it\u0027ll always end up running %pyproject_buildrequires with the docs toxenv. You can see evidence of this in the latest downstream build.\n\nWe could move things around so this is first to have a default value, then the \"%if 0%{?rhosp}...\" block to override the default, then the excluded_brs definitions.\n\nIt\u0027s possible I\u0027m misreading things. This is all quite confusing.",
+      "revId": "d3a941b6853458f16b1524f9455b0d904aecf9b4",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6a7408c2_59ff703e",
+        "filename": "openstack-cloudkitty.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 657
+      },
+      "writtenOn": "2025-11-13T10:24:01Z",
+      "side": 1,
+      "message": "nit: not needed because -p1 is already the default behavior for the underlying git apply call https://git-scm.com/docs/git-apply#Documentation/git-apply.txt--pn\n\nLooks like the general pattern in RDO distgits is to leave it out, only 6 repos out of 226 instances have it:\nhttps://github.com/search?q\u003dorg%3Ardo-packages+autosetup+%22-p1%22\u0026type\u003dcode\nhttps://github.com/search?q\u003dorg%3Ardo-packages+autosetup\u0026type\u003dcode\n\nSo we can drop it for consistency.",
+      "range": {
+        "startLine": 60,
+        "startChar": 51,
+        "endLine": 60,
+        "endChar": 55
+      },
+      "revId": "d3a941b6853458f16b1524f9455b0d904aecf9b4",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
