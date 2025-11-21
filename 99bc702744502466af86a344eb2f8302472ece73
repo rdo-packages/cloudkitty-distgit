@@ -1,0 +1,8 @@
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Code-Review+2: Yatin Karel <ykarel@redhat.com>
+Workflow+1: Yatin Karel <ykarel@redhat.com>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Fri, 21 Nov 2025 09:41:39 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/openstack/cloudkitty-distgit/+/58499
+Project: openstack/cloudkitty-distgit
+Branch: refs/heads/caracal-rdo
