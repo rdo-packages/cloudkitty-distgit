@@ -214,9 +214,12 @@ CloudKitty component for computing rating data.
 %{python3_sitelib}/cloudkitty/tests
 
 %changelog
+<<<<<<< HEAD   (e30f7e Set up downstream guard and exclude pecanwsme when building )
 * Wed Apr 02 2025 RDO <dev@lists.rdoproject.org> 22.0.0-1
 - Update to 22.0.0
 
 * Tue Mar 18 2025 RDO <dev@lists.rdoproject.org> 22.0.0-0.1.0rc1
 - Update to 22.0.0.0rc1
+=======
+>>>>>>> CHANGE (fbe055 Dummy commit to force component rebuild)
 
