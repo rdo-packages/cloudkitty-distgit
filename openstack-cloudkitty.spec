@@ -1,5 +1,5 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0x815AFEC729392386480E076DCC0DFE2D21C023C9
+%global sources_gpg_sign 0x815afec729392386480e076dcc0dfe2d21c023c9
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 # we are excluding some BRs from automatic generator
 %global excluded_brs doc8 bandit pre-commit hacking flake8-import-order os-api-ref
@@ -217,4 +217,5 @@ CloudKitty component for computing rating data.
 
 * Thu Sep 14 2023 RDO <dev@lists.rdoproject.org> 19.0.0-0.1.0rc1
 - Update to 19.0.0.0rc1
+
 
