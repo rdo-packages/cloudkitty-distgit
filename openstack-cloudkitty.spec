@@ -238,12 +238,55 @@ CloudKitty component for computing rating data.
 %{python3_sitelib}/cloudkitty/tests
 
 %changelog
+<<<<<<< HEAD   (736e4b openstack-cloudkitty-18.1.0-1)
 * Thu Oct 24 2024 RDO <dev@lists.rdoproject.org> 18.1.0-1
 - Update to 18.1.0
+=======
+<<<<<<< HEAD   (d14b60 openstack-cloudkitty-19.0.0-1)
+* Wed Oct 04 2023 RDO <dev@lists.rdoproject.org> 19.0.0-1
+- Update to 19.0.0
+=======
+<<<<<<< HEAD   (ccaf20 openstack-cloudkitty-20.0.0-1)
+* Wed Apr 03 2024 RDO <dev@lists.rdoproject.org> 20.0.0-1
+- Update to 20.0.0
+=======
+<<<<<<< HEAD   (cae72e openstack-cloudkitty-21.0.0-1)
+* Wed Oct 02 2024 RDO <dev@lists.rdoproject.org> 21.0.0-1
+- Update to 21.0.0
+=======
+<<<<<<< HEAD   (e30f7e Set up downstream guard and exclude pecanwsme when building )
+* Wed Apr 02 2025 RDO <dev@lists.rdoproject.org> 22.0.0-1
+- Update to 22.0.0
+>>>>>>> CHANGE (292942 Dummy commit to force component rebuild)
+>>>>>>> CHANGE (e37e2c Dummy commit to force component rebuild)
+>>>>>>> CHANGE (e16fd3 Dummy commit to force component rebuild)
+>>>>>>> CHANGE (aefc14 Dummy commit to force component rebuild)
 
+<<<<<<< HEAD   (736e4b openstack-cloudkitty-18.1.0-1)
 * Fri Mar 31 2023 RDO <dev@lists.rdoproject.org> 18.0.0-1
 - Update to 18.0.0
 
 * Tue Mar 14 2023 RDO <dev@lists.rdoproject.org> 18.0.0-0.1.0rc1
 - Update to 18.0.0.0rc1
+=======
+<<<<<<< HEAD   (d14b60 openstack-cloudkitty-19.0.0-1)
+* Thu Sep 14 2023 RDO <dev@lists.rdoproject.org> 19.0.0-0.1.0rc1
+- Update to 19.0.0.0rc1
+=======
+<<<<<<< HEAD   (ccaf20 openstack-cloudkitty-20.0.0-1)
+* Mon Mar 18 2024 RDO <dev@lists.rdoproject.org> 20.0.0-0.1.0rc1
+- Update to 20.0.0.0rc1
+=======
+<<<<<<< HEAD   (cae72e openstack-cloudkitty-21.0.0-1)
+* Mon Sep 23 2024 RDO <dev@lists.rdoproject.org> 21.0.0-0.1.0rc1
+- Update to 21.0.0.0rc1
+=======
+* Tue Mar 18 2025 RDO <dev@lists.rdoproject.org> 22.0.0-0.1.0rc1
+- Update to 22.0.0.0rc1
+=======
+>>>>>>> CHANGE (fbe055 Dummy commit to force component rebuild)
+>>>>>>> CHANGE (292942 Dummy commit to force component rebuild)
+>>>>>>> CHANGE (e37e2c Dummy commit to force component rebuild)
+>>>>>>> CHANGE (e16fd3 Dummy commit to force component rebuild)
+>>>>>>> CHANGE (aefc14 Dummy commit to force component rebuild)
 
