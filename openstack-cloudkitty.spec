@@ -238,6 +238,7 @@ CloudKitty component for computing rating data.
 %{python3_sitelib}/cloudkitty/tests
 
 %changelog
+<<<<<<< HEAD   (736e4b openstack-cloudkitty-18.1.0-1)
 * Thu Oct 24 2024 RDO <dev@lists.rdoproject.org> 18.1.0-1
 - Update to 18.1.0
 
@@ -246,4 +247,5 @@ CloudKitty component for computing rating data.
 
 * Tue Mar 14 2023 RDO <dev@lists.rdoproject.org> 18.0.0-0.1.0rc1
 - Update to 18.0.0.0rc1
+
 
