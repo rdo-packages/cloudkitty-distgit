@@ -209,9 +209,32 @@ CloudKitty component for computing rating data.
 %{python3_sitelib}/cloudkitty/tests
 
 %changelog
+<<<<<<< HEAD   (ccaf20 openstack-cloudkitty-20.0.0-1)
 * Wed Apr 03 2024 RDO <dev@lists.rdoproject.org> 20.0.0-1
 - Update to 20.0.0
+=======
+<<<<<<< HEAD   (cae72e openstack-cloudkitty-21.0.0-1)
+* Wed Oct 02 2024 RDO <dev@lists.rdoproject.org> 21.0.0-1
+- Update to 21.0.0
+=======
+<<<<<<< HEAD   (e30f7e Set up downstream guard and exclude pecanwsme when building )
+* Wed Apr 02 2025 RDO <dev@lists.rdoproject.org> 22.0.0-1
+- Update to 22.0.0
+>>>>>>> CHANGE (292942 Dummy commit to force component rebuild)
+>>>>>>> CHANGE (e37e2c Dummy commit to force component rebuild)
 
+<<<<<<< HEAD   (ccaf20 openstack-cloudkitty-20.0.0-1)
 * Mon Mar 18 2024 RDO <dev@lists.rdoproject.org> 20.0.0-0.1.0rc1
 - Update to 20.0.0.0rc1
+=======
+<<<<<<< HEAD   (cae72e openstack-cloudkitty-21.0.0-1)
+* Mon Sep 23 2024 RDO <dev@lists.rdoproject.org> 21.0.0-0.1.0rc1
+- Update to 21.0.0.0rc1
+=======
+* Tue Mar 18 2025 RDO <dev@lists.rdoproject.org> 22.0.0-0.1.0rc1
+- Update to 22.0.0.0rc1
+=======
+>>>>>>> CHANGE (fbe055 Dummy commit to force component rebuild)
+>>>>>>> CHANGE (292942 Dummy commit to force component rebuild)
+>>>>>>> CHANGE (e37e2c Dummy commit to force component rebuild)
 
