@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e5b6dc1e_e1e3d338",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 718
+      },
+      "writtenOn": "2025-11-26T12:35:38Z",
+      "side": 1,
+      "message": "RPM build errors:\n\n2025-11-25 04:28:08,557 INFO:dlrn-build-mock:DEBUG:     source_date_epoch_from_changelog set but %changelog is missing\n2025-11-25 04:28:08,557 INFO:dlrn-build-mock:DEBUG:     File not found: /builddir/build/BUILDROOT/openstack-cloudkitty-23.1.0-0.20251125092529.4ecb755.el10.x86_64/usr/bin/cloudkitty-writer\n\nThis is expected, since the cloudkitty writer was removed.\nThis error is not going to go away with a rebuild.",
+      "revId": "338a2031f29dd240d7393124b96da1ea1c673ee0",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
