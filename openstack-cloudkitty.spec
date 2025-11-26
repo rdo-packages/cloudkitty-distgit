@@ -135,7 +135,6 @@ Components common to all CloudKitty services.
 %doc LICENSE
 %{_bindir}/cloudkitty-dbsync
 %{_bindir}/cloudkitty-storage-init
-%{_bindir}/cloudkitty-writer
 %{_bindir}/cloudkitty-status
 %{python3_sitelib}/cloudkitty*
 %exclude %{python3_sitelib}/cloudkitty/tests
