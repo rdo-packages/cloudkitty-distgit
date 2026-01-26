@@ -1,5 +1,5 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0xf8675126e2411e7748dd46662fc2093e4682645f
+%global sources_gpg_sign 0x22284f69d9eccdf3df7819791c711af193ff8e54
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 # we are excluding some BRs from automatic generator
 %global excluded_brs doc8 bandit pre-commit hacking flake8-import-order os-api-ref
@@ -11,7 +11,7 @@
 
 Name: openstack-cloudkitty
 Summary: OpenStack Rating (cloudkitty)
-Version: 21.0.0
+Version: 21.0.1
 Release: 1%{?dist}
 License: Apache-2.0
 URL: http://github.com/openstack/cloudkitty
@@ -209,6 +209,9 @@ CloudKitty component for computing rating data.
 %{python3_sitelib}/cloudkitty/tests
 
 %changelog
+* Mon Jan 26 2026 RDO <dev@lists.rdoproject.org> 21.0.1-1
+- Update to 21.0.1
+
 * Wed Oct 02 2024 RDO <dev@lists.rdoproject.org> 21.0.0-1
 - Update to 21.0.0
 
