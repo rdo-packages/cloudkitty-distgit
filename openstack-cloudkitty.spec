@@ -40,6 +40,26 @@ BuildRequires: pyproject-rpm-macros
 BuildRequires: git-core
 BuildRequires: systemd
 BuildRequires: openstack-macros
+BuildRequires: python3-alembic
+BuildRequires: python3-coverage
+BuildRequires: python3-datetimerange
+BuildRequires: python3-dateutil
+BuildRequires: python3-ddt
+BuildRequires: python3-gabbi
+BuildRequires: python3-influxdb-client
+BuildRequires: python3-iso8601
+BuildRequires: python3-keystoneauth1
+BuildRequires: python3-kombu
+BuildRequires: python3-oslo-concurrency
+BuildRequires: python3-oslo-context
+BuildRequires: python3-oslo-log
+BuildRequires: python3-oslo-middleware
+BuildRequires: python3-oslo-policy
+BuildRequires: python3-oslotest
+BuildRequires: python3-requests
+BuildRequires: python3-stestr
+BuildRequires: python3-testscenarios
+BuildRequires: python3-voluptuous
 
 Requires: %{name}-common = %{version}-%{release}
 Requires: %{name}-api = %{version}-%{release}
