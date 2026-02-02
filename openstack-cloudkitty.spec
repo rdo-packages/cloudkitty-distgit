@@ -40,6 +40,7 @@ BuildRequires: pyproject-rpm-macros
 BuildRequires: git-core
 BuildRequires: systemd
 BuildRequires: openstack-macros
+BuildRequires: python3-influxdb-client
 
 Requires: %{name}-common = %{version}-%{release}
 Requires: %{name}-api = %{version}-%{release}
