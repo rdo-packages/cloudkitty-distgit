@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "77bae7bd_86e7d821",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 778
+      },
+      "writtenOn": "2026-02-02T14:06:58Z",
+      "side": 1,
+      "message": "As expected, there are many dependencies that are not retrieved with the generate_buildrequires function, that would need to be added here. python3-influxdb-client was only the first to fail.",
+      "revId": "4cb918756882ef90cac40ae0f1876774c2cd0128",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
