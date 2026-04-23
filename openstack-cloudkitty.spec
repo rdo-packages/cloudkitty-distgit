@@ -23,6 +23,7 @@ Source0: https://tarballs.openstack.org/cloudkitty/cloudkitty-%{upstream_version
 Source1: cloudkitty.logrotate
 Source2: cloudkitty-api.service
 Source3: cloudkitty-processor.service
+Source4: cloudkitty-api
 # Required for tarball sources verification
 %if 0%{?sources_gpg} == 1
 Source101:        https://tarballs.openstack.org/cloudkitty/cloudkitty-%{upstream_version}.tar.gz.asc
@@ -102,6 +103,9 @@ install -p -D -m 644 %{SOURCE1} %{buildroot}%{_sysconfdir}/logrotate.d/openstack
 # install systemd unit files
 install -p -D -m 644 %{SOURCE2} %{buildroot}%{_unitdir}/cloudkitty-api.service
 install -p -D -m 644 %{SOURCE3} %{buildroot}%{_unitdir}/cloudkitty-processor.service
+
+# Install WSGI API compatibility wrapper
+install -p -D -m 755 %{SOURCE4} %{buildroot}%{_bindir}/cloudkitty-api
 
 mkdir -p %{buildroot}/var/lib/cloudkitty/
 mkdir -p %{buildroot}/etc/cloudkitty/
@@ -211,3 +215,5 @@ CloudKitty component for computing rating data.
 
 %changelog
 
+* Tue May 5 2026 Emma Foley <efoley@redhat.com>
+- Add in wsgi script to replace the one removed upstream.
