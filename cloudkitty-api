@@ -1,0 +1,5 @@
+#!/usr/bin/python3 -sP
+
+from cloudkitty.api import app
+
+application = app.build_wsgi_app(argv=[])
