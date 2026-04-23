@@ -23,6 +23,7 @@ Source0: https://tarballs.openstack.org/cloudkitty/cloudkitty-%{upstream_version
 Source1: cloudkitty.logrotate
 Source2: cloudkitty-api.service
 Source3: cloudkitty-processor.service
+Source4: cloudkitty-api
 # Required for tarball sources verification
 %if 0%{?sources_gpg} == 1
 Source101:        https://tarballs.openstack.org/cloudkitty/cloudkitty-%{upstream_version}.tar.gz.asc
@@ -36,6 +37,7 @@ BuildArch: noarch
 BuildRequires:  /usr/bin/gpgv2
 %endif
 BuildRequires: python3-devel
+BuildRequires: python3-pip
 BuildRequires: pyproject-rpm-macros
 BuildRequires: git-core
 BuildRequires: systemd
@@ -78,6 +80,11 @@ for pkg in %{excluded_brs}; do
   done
 done
 
+# Install newer setuptools for PEP 639 license field support
+# CentOS 10 ships setuptools 69.0.3, but upstream pyproject.toml (commit 13c0dcf)
+# uses modern SPDX license format (license = "Apache-2.0") which requires setuptools >= 77.0.0
+%{__python3} -m pip install --user 'setuptools>=77.0.0'
+
 # Automatic BR generation
 %generate_buildrequires
 %if 0%{?with_doc}
@@ -102,6 +109,9 @@ install -p -D -m 644 %{SOURCE1} %{buildroot}%{_sysconfdir}/logrotate.d/openstack
 # install systemd unit files
 install -p -D -m 644 %{SOURCE2} %{buildroot}%{_unitdir}/cloudkitty-api.service
 install -p -D -m 644 %{SOURCE3} %{buildroot}%{_unitdir}/cloudkitty-processor.service
+
+# Install WSGI API compatibility wrapper
+install -p -D -m 755 %{SOURCE4} %{buildroot}%{_bindir}/cloudkitty-api
 
 mkdir -p %{buildroot}/var/lib/cloudkitty/
 mkdir -p %{buildroot}/etc/cloudkitty/
@@ -210,4 +220,10 @@ CloudKitty component for computing rating data.
 %{python3_sitelib}/cloudkitty/tests
 
 %changelog
+
+* Tue May 11 2026, Emma Foley <efoley@redhat.com>
+- Add in wsgi script to replace the one removed upstream.
+- Use pip to install setuptools >= 77.0.0 to support modern PEP 639 license
+  format (license = "Apache-2.0") which is not yet packaged in CentOS
+  Stream 10
 
