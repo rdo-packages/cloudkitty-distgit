@@ -23,6 +23,10 @@ Source0: https://tarballs.openstack.org/cloudkitty/cloudkitty-%{upstream_version
 Source1: cloudkitty.logrotate
 Source2: cloudkitty-api.service
 Source3: cloudkitty-processor.service
+Source4: cloudkitty-api
+# Temporary patch for PEP 639 license format compatibility with setuptools < 77.0.0
+# Can be removed once CentOS 10 ships setuptools >= 77.0.0
+Patch0001: pep639-license-compat.patch
 # Required for tarball sources verification
 %if 0%{?sources_gpg} == 1
 Source101:        https://tarballs.openstack.org/cloudkitty/cloudkitty-%{upstream_version}.tar.gz.asc
@@ -57,6 +61,8 @@ This package contains the CloudKitty test files.
 %if 0%{?sources_gpg} == 1
 %{gpgverify}  --keyring=%{SOURCE102} --signature=%{SOURCE101} --data=%{SOURCE0}
 %endif
+# Apply PEP 639 compat patch before autosetup to fix license format for setuptools < 77
+%patch -P 0001 -p1
 %autosetup -n cloudkitty-%{upstream_version} -S git
 
 
@@ -102,6 +108,9 @@ install -p -D -m 644 %{SOURCE1} %{buildroot}%{_sysconfdir}/logrotate.d/openstack
 # install systemd unit files
 install -p -D -m 644 %{SOURCE2} %{buildroot}%{_unitdir}/cloudkitty-api.service
 install -p -D -m 644 %{SOURCE3} %{buildroot}%{_unitdir}/cloudkitty-processor.service
+
+# Install WSGI API compatibility wrapper
+install -p -D -m 755 %{SOURCE4} %{buildroot}%{_bindir}/cloudkitty-api
 
 mkdir -p %{buildroot}/var/lib/cloudkitty/
 mkdir -p %{buildroot}/etc/cloudkitty/
@@ -210,4 +219,9 @@ CloudKitty component for computing rating data.
 %{python3_sitelib}/cloudkitty/tests
 
 %changelog
+
+* Tue May 11 2026, Emma Foley <efoley@redhat.com>
+- Add in wsgi script to replace the one removed upstream.
+- Patch pyproject.toml to use PEP 639 compatible license format for
+  setuptools < 77.0.0 (CentOS 10 ships 69.0.3)
 
