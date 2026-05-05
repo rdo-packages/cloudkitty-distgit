@@ -16,6 +16,23 @@
       "message": "2026-04-23 08:41:18,346 INFO:dlrn-build-mock:DEBUG: RPM build warnings:\n2026-04-23 08:41:18,346 INFO:dlrn-build-mock:DEBUG: RPM build errors:\n2026-04-23 08:41:18,346 INFO:dlrn-build-mock:DEBUG:     source_date_epoch_from_changelog set but %changelog is missing\n2026-04-23 08:41:18,346 INFO:dlrn-build-mock:DEBUG:     File not found: /builddir/build/BUILDROOT/openstack-cloudkitty-24.1.0-0.20260423123847.06611a8.el10.x86_64/usr/bin/cloudkitty-api\n2026-04-23 08:41:18,356 INFO:dlrn-build-mock:DEBUG: Child return code was: 1\n\nThe usr/bin/cloudkitty-api file is missing.",
       "revId": "69149b612e561e80a952ce91bda80e41a0778431",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f3c2cb44_d736908b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 718
+      },
+      "writtenOn": "2026-05-05T18:34:39Z",
+      "side": 1,
+      "message": "Glance made a similar change, and the solution in RDO was to add a small script fr compatability in the distgit: https://github.com/rdo-packages/glance-distgit/commit/05968b35c77aaae4b3c5a535bb68052e36b91c89",
+      "revId": "69149b612e561e80a952ce91bda80e41a0778431",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
