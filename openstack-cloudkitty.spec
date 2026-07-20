@@ -15,7 +15,7 @@
 
 Name: openstack-cloudkitty
 Summary: OpenStack Rating (cloudkitty)
-Version: 22.0.0
+Version: 22.1.0
 Release: 1%{?dist}
 License: Apache-2.0
 URL: http://github.com/openstack/cloudkitty
@@ -214,6 +214,9 @@ CloudKitty component for computing rating data.
 %{python3_sitelib}/cloudkitty/tests
 
 %changelog
+* Mon Jul 20 2026 RDO <dev@lists.rdoproject.org> 22.1.0-1
+- Update to 22.1.0
+
 * Wed Apr 02 2025 RDO <dev@lists.rdoproject.org> 22.0.0-1
 - Update to 22.0.0
 
